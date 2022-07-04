@@ -8,7 +8,6 @@ on:
 
 jobs:
   build:
-
     runs-on: macos-latest
 
     steps:
@@ -17,5 +16,4 @@ jobs:
       run: echo Hello, world!
     - name: Run tests
       run: | 
-        echo Add other actions to build,
-        echo test, and edploy your project
+        xcodebuild clean test -project action.xcodeproj -scheme action -destination "platform=iOS Simulator,name=iPhone 11"
